@@ -14,7 +14,6 @@ const DEFAULT_FORM_FIELDS = {
 const SignInForm = () => {
     const [formFields, setFormFields] = useState(DEFAULT_FORM_FIELDS);
     const { email, password } = formFields;
-
     const resetFormFields = () => {
         setFormFields(DEFAULT_FORM_FIELDS);
     }
@@ -23,7 +22,6 @@ const SignInForm = () => {
         const { user } = await signInWithGooglePopup();
         await createUserDocumentFromAuth(user);
     }
-
 
     const handleChange = (event) => {
         const { name, value } = event.target;
@@ -73,7 +71,7 @@ const SignInForm = () => {
                     name="password"
                     value={password} />
 
-                    <h5 style={{color:'red'}}> {formFields.errorMessage} </h5>
+                <h5 style={{ color: 'red' }}> {formFields.errorMessage} </h5>
 
                 <div className="buttons-container">
                     <Button type='submit'>Sign In </Button>

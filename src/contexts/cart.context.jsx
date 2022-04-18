@@ -14,7 +14,7 @@ const addCartItem = (cartItems, productToAdd) => {
     }
 
     // if item doesn't exist, create it.
-    // we are basically extending our products array by adding quantity to each.
+    // we are basically extending our products array by adding quantity to each object.
     return [...cartItems, { ...productToAdd, quantity: 1 }];
 }
 

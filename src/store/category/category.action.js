@@ -14,6 +14,7 @@ const fetchCategoriesFailure = (error) => {
     return createAction(CATEGORY_ACTION_TYPES.FETCH_CATEGORIES_FAIL, error);
 };
 
+// function currying 
 export const fetchCategoriesAsync = () => async (dispatch) => {
     dispatch(fetchCategoriesStart());
 

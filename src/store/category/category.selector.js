@@ -10,7 +10,7 @@ export const selectCategories = createSelector(
     the object coming from selectCategoryReducer (categoriesSlice) is different
     So as long as state.categories doesn't update - don't case re-render
     */
-)
+);
 
 export const selectCategoriesMap = createSelector(
     [selectCategories],
@@ -20,3 +20,7 @@ export const selectCategoriesMap = createSelector(
         return accumulator;
     }, {}))
 
+export const selectCategoriesIsLoading = createSelector(
+    [selectCategories],
+    (categoriesSlice) => categoriesSlice.isLoading
+);
